@@ -1,0 +1,36 @@
+{"error_type": 0, 
+	  "videos": {
+		"1": {
+			"episode": 1,
+			"title": "Episode 1",
+			"url": "http://www.tools4movies.com/dvd_catalyst_profile_samples/The Amazing Spiderman bionic.mp4",
+			"uploaded": "2013-10-31",
+			"duration": 6000,
+			"description": "This is episode 1!"
+		},
+		"2": {
+			"episode": 4,
+			"title": "Episode 4",
+			"url": "http://www.tools4movies.com/dvd_catalyst_profile_samples/Twilight 4 Breaking Dawn bionic.mp4",
+			"uploaded": "2013-11-02",
+			"duration": 3000,
+			"description": "This, however, is episode 4!"
+		},
+		"3": {
+			"episode": 5,
+			"title": "Episode 5",
+			"url": "http://www.tools4movies.com/dvd_catalyst_profile_samples/The Amazing Spiderman bionic.mp4",
+			"uploaded": "2013-10-31",
+			"duration": 6000,
+			"description": "This is episode 5!"
+		},
+		"4": {
+			"episode": 6,
+			"title": "Episode 6",
+			"url": "http://www.tools4movies.com/dvd_catalyst_profile_samples/Twilight 4 Breaking Dawn bionic.mp4",
+			"uploaded": "2013-11-02",
+			"duration": 3000,
+			"description": "This, however, is episode 6!"
+		}
+	}
+}

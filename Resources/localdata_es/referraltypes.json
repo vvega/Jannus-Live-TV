@@ -1,0 +1,38 @@
+[
+	{
+		"text": "Advertisement",
+		"value": "1"
+	},
+	{
+		"text": "Email/Newsletter",
+		"value": "2"
+	},
+	{
+		"text": "Facebook",
+		"value": "3"
+	},
+	{
+		"text": "Magazine Article",
+		"value": "4"
+	},
+	{
+		"text": "Newspaper",
+		"value": "5"
+	},
+	{
+		"text": "TV/Cable News",
+		"value": "6"
+	},
+	{
+		"text": "Twitter",
+		"value": "7"
+	},
+	{
+		"text": "Website/Search Engine",
+		"value": "8"
+	},
+	{
+		"text": "Other",
+		"value": "9"
+	}
+]

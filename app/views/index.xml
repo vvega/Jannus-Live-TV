@@ -1,5 +1,13 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Hello, World</Label>
+		<ScrollView>
+			<View>
+				<ImageView id="login_logo"></ImageView>
+				<TextField id="username"></TextField>
+				<TextField id="passwd"></TextField>
+				<Button id="login_btn"></Button>
+				<Button id="register_btn"></Button>
+			</View>
+		</ScrollView>
 	</Window>
 </Alloy>

@@ -1,0 +1,54 @@
+".container": {
+	navBarHidden:"true",
+	orientation: Ti.UI.PORTRAIT,
+	layout: "vertical",
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL,
+	backgroundColor:"black",
+	backgroundImage: "/images/background.png"
+},
+"View":{
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+},
+"Label": {
+	font: {fontSize: "18dp"},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+"Picker": {
+	width: Ti.UI.FILL
+},
+"TextField": {
+	width: Ti.UI.FILL,
+	height: "60dp",
+	top: "10dp",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+},
+"Button": {
+	width: Ti.UI.FILL,
+	height: "68dp",
+	top: "10dp",
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+},
+".header": {
+	width: Ti.UI.FILL,
+	height: "75dp",
+	backgroundColor: "#A50",
+
+},
+".pageTitle": {
+	font: {fontSize: "24dp"},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+".ldpi": {
+	font: {fontSize: '9dp', fontWeight: 'normal' }
+},
+".mdpi": {
+	font: {fontSize: '12dp', fontWeight: 'normal' }
+},
+".hdpi": {
+	font: {fontSize: '18dp', fontWeight: 'bold' }
+},
+".xhdpi": {
+	font: {fontSize: '24dp', fontWeight: 'bold' }
+}

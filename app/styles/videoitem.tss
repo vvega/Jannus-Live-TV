@@ -1,0 +1,4 @@
+"ListItem": {
+	height:"60dp",
+	font: {fontSize: "30dp", fontWeight: "bold", fontColor:"#000"}
+}

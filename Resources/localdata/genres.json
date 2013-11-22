@@ -1,0 +1,50 @@
+[
+	{
+		"text": "Alternative",
+		"value": "1"
+	},
+	{
+		"text": "Blues",
+		"value": "2"
+	},
+	{
+		"text": "Latin",
+		"value": "3"
+	},
+	{
+		"text": "Country",
+		"value": "4"
+	},
+	{
+		"text": "Electronic",
+		"value": "5"
+	},
+	{
+		"text": "Folk",
+		"value": "6"
+	},
+	{
+		"text": "Hip Hop",
+		"value": "7"
+	},
+	{
+		"text": "Jazz",
+		"value": "8"
+	},
+	{
+		"text": "Pop",
+		"value": "9"
+	},
+	{
+		"text": "R&B",
+		"value": "10"
+	},
+	{
+		"text": "Rock",
+		"value": "11"
+	},
+	{
+		"text": "Ska",
+		"value": "12"
+	}
+]

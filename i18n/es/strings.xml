@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+	<string name="localdata_path">/localdata_es/</string>
+	<string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Log In</string>
+    <string name="register_button">Register</string>
+    <string name="account_creation">Account Creation</string>
+    <string name="enter_username">Enter Username:</string>
+    <string name="enter_password">Enter Password:</string>
+    <string name="confirm_password">Enter Password:</string>
+    <string name="enter_email">Enter Email:</string>
+    <string name="confirm_email">Confirm Email:</string>
+    <string name="other_info">Other Information</string>
+    <string name="first_name">First Name:</string>
+    <string name="last_name">Last Name:</string>
+    <string name="zip_code">Zip Code:</string>
+    <string name="country_label">Country:</string>
+    <string name="gender_label">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="agegroup_label">Age Group:</string>
+    <string name="preferred_genres">Preferred Genres:</string>
+    <string name="referral_label">How did you find out about JLTV?</string>
+    <string name="registration_submit">Submit</string>
+    <string name="loading">Loading...</string>
+    <string name="episode_label">Episode</string>
+</resources>

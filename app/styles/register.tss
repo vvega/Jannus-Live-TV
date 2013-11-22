@@ -1,0 +1,16 @@
+"Label":{
+	font: {fontSize: "18dp", fontWeight: "bold"},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	left: "10dp"
+},
+".sectionTitle":{
+	font: {fontSize: "22dp", fontWeight: "bold"},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+},
+"#genres":{
+	layout: "horizontal"
+},
+"#other": {
+	visible: false,
+	height: "0"
+}

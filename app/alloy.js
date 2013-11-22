@@ -9,3 +9,5 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
+Titanium.UI.orientation = Titanium.UI.PORTRAIT;
+Alloy.Collections.videos = Alloy.createCollection('video');

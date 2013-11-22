@@ -1,0 +1,30 @@
+[
+	{
+		"text": "< 13 years old",
+		"value": "1"
+	},
+	{
+		"text": "13 - 18",
+		"value": "2"
+	},
+	{
+		"text": "19 - 25",
+		"value": "3"
+	},
+	{
+		"text": "26 - 30",
+		"value": "4"
+	},
+	{
+		"text": "31 - 40",
+		"value": "5"
+	},
+	{
+		"text": "41 - 50",
+		"value": "6"
+	},
+	{
+		"text": "> 50 years old",
+		"value": "7"
+	}
+]

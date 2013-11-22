@@ -1,8 +1,16 @@
 {
-	"global": {}, 
-	"env:development": {}, 
-	"env:test": {}, 
-	"env:production": {}, 
+	"global": {
+		"app_url": "https://www.jannuslive.tv/"
+	}, 
+	"env:development": {
+		"app_url": "http://www.designethereal.com/jltv_test/"
+	}, 
+	"env:test": {
+		"app_url": "http://www.designethereal.com/jltv_test/"
+	}, 
+	"env:production": {
+		"app_url": "https://www.jannuslive.tv/"
+	}, 
 	"os:android": {},
 	"os:blackberry": {},
 	"os:ios": {},

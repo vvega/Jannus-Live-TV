@@ -1,0 +1,4 @@
+"VideoView": {
+	width: Ti.UI.FILL,
+	height: "280dp"
+}

@@ -1,0 +1,12 @@
+<Alloy>
+	<Collection src="video" />
+	<Window class="container" id="videolist">
+		<View class = "header">
+		</View>
+		<ListView>
+			<ListSection id="videolistview" dataCollection = "videos" onclick="viewVideo">
+				<Require src="videoitem" />
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>
