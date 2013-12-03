@@ -1,13 +1,13 @@
-exports.doLogin = function(user, pass) {
-	//alert("username: " +user + " pass: " + pass);
-	/*var progressIndicator = Ti.UI.Android.createProgressIndicator({
-	  message: Ti.Locale.getString('loading'),
-	  location: Ti.UI.Android.PROGRESS_INDICATOR_DIALOG,
-	  type: Ti.UI.Android.PROGRESS_INDICATOR_INDETERMINANT,
-	  cancelable: true,
-	  max: 3,
-	  min: 0
-	});
-	progressIndicator.show();*/
-	return true;
+exports.doLogin = function(user, pass, callback) {
+	
+	Alloy.Globals.progress.setMessage(Ti.Locale.getString('logging_in'));
+	
+    //build parameter JSON object 
+    var params = {
+    	username : user, 
+    	password : pass,
+    	client : Alloy.CFG.client
+    };
+    
+    Alloy.Globals.ajaxClient.sendData(Alloy.CFG.login_path, params, callback);
 };

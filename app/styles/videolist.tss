@@ -1,13 +1,12 @@
 "Label":{
-	font: {fontSize: "30dp", fontWeight: "bold"},
+	font: {fontSize: "20dp", fontWeight: "bold"},
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
-	left: "10dp",
-	
+	left: "10dp",	
 },
 "#videolistview":{
 	layout: "vertical",
 	height: Ti.UI.FILL,
-	backgroundColor:"#555",
+	borderColor: "#FFF",
 },
 "ListSection":{
 	layout: "vertical",

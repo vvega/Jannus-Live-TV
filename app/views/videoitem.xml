@@ -1,3 +1,10 @@
+<!--TODO: create custom itemlist template -->
 <Alloy>
-		<ListItem title="{title}"></ListItem>
+	<ListItem 
+		episode:text="{episode}"
+		title:text="{title}"
+		url_thumb:image="{url_thumb}"
+		uploaded:text="{uploaded}"
+		duration:text="{duration}"
+		description:text="{description}" />
 </Alloy>

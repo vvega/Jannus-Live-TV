@@ -1,15 +1,22 @@
 {
 	"global": {
-		"app_url": "https://www.jannuslive.tv/"
+		"app_url": "http://www.jannuslive.tv/",
+		"login_path": "login.php",
+		"register_path": "register.php",
+		"videolist_path": "videolist.php",
+		"client" : "mobile_app",
+		"vid_append": "video.mp4",
+		"thumb_append": "thumbnail.jpg"
+		
 	}, 
 	"env:development": {
-		"app_url": "http://www.designethereal.com/jltv_test/"
+		"app_url": "http://s492515155.onlinehome.us/"
 	}, 
 	"env:test": {
-		"app_url": "http://www.designethereal.com/jltv_test/"
+		"app_url": "http://s492515155.onlinehome.us/"
 	}, 
 	"env:production": {
-		"app_url": "https://www.jannuslive.tv/"
+		"app_url": "http://www.jannuslive.tv/"
 	}, 
 	"os:android": {},
 	"os:blackberry": {},

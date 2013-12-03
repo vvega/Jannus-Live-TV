@@ -1,0 +1,7 @@
+<Alloy>
+		<ItemTemplate name="template">
+	        <ImageView bindId="url_thumb" id="icon" />
+	        <Label bindId="title" id="title" />
+	        <Label bindId="description" id="subtitle" />
+   		</ItemTemplate>
+</Alloy>

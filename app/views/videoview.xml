@@ -1,19 +1,21 @@
 <Alloy>
-<!--	<Window class="container" id="videoview">
-		<View class = "header">
-			<Label id="episode" textid="episode_label"></Label>
-			<Label id="episode_number" text="{episode}"></Label>
+	<Window class="container" id="videoview">
+		<View class = "header" id = "video_header">
+			<Label class = "header_label" id="episode_title" textid="episode_label" />
+			<Label class = "header_label" text="{episode}" />
 		</View>
-		<ScrollView>
-			<View id = "video_content">
-				<Label class = "header_text" text="{title}"></Label>
-				<VideoPlayer id="video_player" url="{url}" autoplay="true" />
+		<View id="video_title">
+			<Label id="video_title_label" class="detail_label" text="{title}" />
+		</View>
+		<View id = "video_content">
+			<VideoPlayer id="video_player" url="{url_vid}" autoplay="true" />
+		</View>
+		<ScrollView id="video_details">
+			<View id = "details_section">
+				<Label class="detail_label" textid="duration_label" /><Label id="duration" text="{duration}" />
+				<Label class="detail_label" textid="uploaded_label" /><Label id="uploaded" text="{uploaded}" />
 			</View>
-			<View id = "video_details">
-				<Label id="duration" text="{duration}"></Label>
-				<Label id="uploaded" text="{uploaded}"></Label>
-				<Label id="description" text="{description}"></Label>
-			</View>
+			<Label id="description" text="{description}" />
 		</ScrollView>
-	</Window>-->
+	</Window>
 </Alloy>

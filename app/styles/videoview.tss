@@ -1,4 +1,63 @@
-"VideoView": {
-	width: Ti.UI.FILL,
-	height: "280dp"
+".container": {
+	fullscreen : true
+},
+"VideoPlayer": {
+	top: "0",
+	width: Alloy.Globals.styles.portrait_video_width,
+	scalingMode: Titanium.Media.VIDEO_SCALING_ASPECT_FIT,
+	mediaControlStyle: Ti.Media.VIDEO_CONTROL_HIDDEN,
+	backgroundColor: "#333",
+	height: Alloy.Globals.styles.portrait_video_height
+},
+"View":{
+	layout: "horizontal"
+},
+"#video_header": {
+	layout: "horizontal"
+},
+".video_content": {
+	top: "10dp"
+},
+"Label": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	left: "0"
+},
+"video_details": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	width: Ti.UI.FILL
+},
+"#episode_title": {
+	left: "20dp",
+	right: "8dp"
+},
+"#video_title": {
+	layout: "vertical",
+	top: Alloy.Globals.styles.standard_margin,
+	bottom: Alloy.Globals.styles.standard_margin
+},
+"#video_title_label": {
+	font: Alloy.Globals.styles.subtitle_font,
+	color: "#ffbf0f"
+},
+"#description": {
+	layout: "vertical",
+	font: {fontSize: "16dp"},
+	left: "15dp",
+	right: "15dp",
+	width: "auto",
+	height: "auto"
+},
+"#details_section": {
+	bottom: "10dp"
+},
+".detail_label": {
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	font: {fontSize: "16dp", fontWeight: "bold"},
+	color: "#ffbf0f",
+	left: "15dp",
+	right: "5dp"
+},
+"ScrollView": {
+	top: "15dp",
+	layout: "vertical"
 }

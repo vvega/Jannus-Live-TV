@@ -1,19 +1,20 @@
 //Login Styling
+".container":{
+	exitOnClose: true
+},
 "#login_logo": {
-	top: "15dp",
+	top: "5dp",
 	image: "/images/jannus_logo.png",
-	width: Ti.UI.FILL
+	height: Alloy.Globals.styles.logo_height
 },
 "#username": {
-	top: "30dp",
-	tooltipid: "username_hint"
+	top: "20dp",
 },
 "#password": {
-	tooltipid: "password_hint",
 	passwordMask: "true"
 },
 "#login_btn": {
-	bottom: "10dp",
+	bottom: "5dp",
 	titleid: "login_button"
 },
 "#register_btn": {

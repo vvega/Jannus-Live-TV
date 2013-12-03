@@ -1,0 +1,63 @@
+<Alloy>
+	<Window class="container">
+		<View class = "header">
+			<Label class = "header_label" textid="account_creation"></Label>
+		</View>
+		<ScrollView>			
+			<View>
+			
+				<Label textid="enter_username"></Label>
+				<Label class = "hint" textid="usernameHint"></Label>
+				<TextField id="username_register" value="testtest"></TextField>
+				
+				<Label textid="enter_password"></Label>
+				<Label class = "hint" textid="passwordHint"></Label>
+				<TextField id="password_register" passwordMask="true" value="Test1234"></TextField>
+				
+				<Label textid="confirm_password"></Label>
+				<TextField id="passwordMatch" passwordMask="true" value="Test1234"></TextField>
+				
+				<Label textid="enter_email"></Label>
+				<Label class = "hint" textid="emailHint"></Label>
+				<TextField id="email" value="test@gmail.com"></TextField>
+				
+				<Label textid="confirm_email"></Label>
+				<TextField id="emailMatch" value="test@gmail.com"></TextField>
+				
+				<Label class = "sectionTitle" textid="other_info"></Label>
+				
+				<Label textid="first_name"></Label>
+				<TextField id="firstname" value="test"></TextField>
+				
+				<Label textid = "last_name"></Label>
+				<TextField id="lastname" value="test"></TextField>
+				
+				<Label textid="country_label"></Label>
+				<Picker id = "countryPicker"></Picker>
+				
+				<TextField id="zip" hintText="Enter 5-digit zip code."></TextField>				
+		
+				<Label textid="gender_label"></Label>
+				<Picker id = "gender">
+					<PickerRow id = "m" value="M" title="Male"></PickerRow>
+					<PickerRow id = "f" value="F" title="Female"></PickerRow>
+				</Picker>
+				
+				<Label textid="agegroup_label"></Label>
+				<Picker id = "agegroupPicker"></Picker>
+				
+				<Label textid="preferred_genres"></Label>
+				<View id = "genres">
+				</View>
+				
+				<Label textid="referral_label"></Label>
+				<Picker id = "referralPicker"></Picker>
+				<TextField id="other" value="test"></TextField>
+							  
+			    <Button id="registration_submit" titleid="registration_submit" onClick="submitRegistration"></Button>
+			
+			  </View>
+
+		</ScrollView>
+	</Window>
+</Alloy>

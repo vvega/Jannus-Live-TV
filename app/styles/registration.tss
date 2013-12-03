@@ -7,6 +7,9 @@
 	font: {fontSize: "22dp", fontWeight: "bold"},
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
 },
+".hint": {
+	font: {fontSize: "11dp"}
+},
 "#genres":{
 	layout: "horizontal"
 },

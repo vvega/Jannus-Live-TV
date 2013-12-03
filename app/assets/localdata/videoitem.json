@@ -1,0 +1,66 @@
+{
+	childTemplates : [
+	        {
+	            type : 'Ti.UI.Label',
+	            bindId : 'episode',
+	            properties : {
+	                color : '#000',
+	                left : '60dp',
+	                top : 0,
+	                textAlign : 'left'
+	            }
+	        },
+	        {
+	            type : 'Ti.UI.ImageView', 
+	            bindId : 'url_thumb', 
+	            properties : {
+	                width : '125dp',
+	                height : '125dp',
+	                left : 0
+	            }
+	         },
+	        {
+	            type : 'Ti.UI.Label',
+	            bindId : 'title',
+	            properties : {
+	                color : '#000',
+	                left : '60dp',
+	                top : 0,
+	                textAlign : 'left'
+	            }
+	        },
+	        {
+	            type : 'Ti.UI.Label',
+	            bindId : 'description',
+	            properties : {
+	                color : '#000',
+	                left : '60dp',
+	                top : 0,
+	                textAlign : 'left'
+	            }
+	        },
+	        {
+	            type : 'Ti.UI.Label',
+	            bindId : 'duration',
+	            properties : {
+	                color : '#000',
+	                left : '60dp',
+	                top : 0,
+	                textAlign : 'left'
+	            }
+	        },
+	         {
+	            type : 'Ti.UI.Label',
+	            bindId : 'uploaded',
+	            properties : {
+	                color : '#000',
+	                left : '60dp',
+	                top : 0,
+	                textAlign : 'left'
+	            }
+	        }],
+	  properties : {
+	            height : '150dp',
+	            //height : Ti.UI.SIZE
+	  }
+}

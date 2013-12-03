@@ -19,26 +19,37 @@
 	width: Ti.UI.FILL
 },
 "TextField": {
-	width: Ti.UI.FILL,
-	height: "60dp",
+	width: Alloy.Globals.styles.entry_fields_width,
+	height: Alloy.Globals.styles.textfield_height,
 	top: "10dp",
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: "5dp",
+	backgroundColor: Alloy.Globals.styles.textfield_bg_color,
+	borderColor: Alloy.Globals.styles.textfield_border_color,
+	borderRadius: 5,
+	borderWidth: Alloy.Globals.styles.textfield_border_width,
+	color: Alloy.Globals.styles.textfield_text_color
 },
 "Button": {
-	width: Ti.UI.FILL,
-	height: "68dp",
+	width: Alloy.Globals.styles.entry_fields_width,
+	height: Alloy.Globals.styles.button_height,
 	top: "10dp",
-	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: 5,
+	borderWidth: Alloy.Globals.styles.textfield_border_width,
+	font: Alloy.Globals.styles.button_font,
+	backgroundGradient: Alloy.Globals.styles.jannus_gradient
 },
 ".header": {
 	width: Ti.UI.FILL,
-	height: "75dp",
-	backgroundColor: "#A50",
-
+	height: Alloy.Globals.styles.header_height,
+	backgroundGradient: Alloy.Globals.styles.jannus_gradient
 },
-".pageTitle": {
-	font: {fontSize: "24dp"},
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+".header_label": {
+	font: Alloy.Globals.styles.title_font,
+	color: "#333",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	top: "16dp"
 },
 ".ldpi": {
 	font: {fontSize: '9dp', fontWeight: 'normal' }

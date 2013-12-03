@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-	<string name="localdata_path">/localdata_es/</string>
+	<string name="localdata_path">/localdata/</string>
 	<string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_button">Log In</string>
     <string name="register_button">Register</string>
     <string name="account_creation">Account Creation</string>
     <string name="enter_username">Enter Username:</string>
+    <string name="usernameHint">Please use between 5 and 20 characters.</string>
     <string name="enter_password">Enter Password:</string>
-    <string name="confirm_password">Enter Password:</string>
+    <string name="passwordHint">Must be at least 8 characters and contain at least 
+    	1 lowercase letter, one uppercase letter, and one digit.</string>
+    <string name="confirm_password">Confirm Password:</string>
     <string name="enter_email">Enter Email:</string>
+    <string name="emailHint">Ex: name@domain.com.</string>
     <string name="confirm_email">Confirm Email:</string>
     <string name="other_info">Other Information</string>
     <string name="first_name">First Name:</string>
@@ -24,5 +28,13 @@
     <string name="referral_label">How did you find out about JLTV?</string>
     <string name="registration_submit">Submit</string>
     <string name="loading">Loading...</string>
-    <string name="episode_label">Episode</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="loading_list">Getting episode list...</string>
+    <string name="loading_episode">Loading episode...</string>
+    <string name="loading_form">Loading form...</string>
+    <string name="registering">Trying registration...</string>
+    <string name="episode_label">Episode </string>
+    <string name="duration_label">Duration: </string>
+    <string name="uploaded_label">Uploaded: </string>
+    <string name="description_label">Description: </string>
 </resources>

@@ -2,9 +2,13 @@
 	<Collection src="video" />
 	<Window class="container" id="videolist">
 		<View class = "header">
+			<!--<Button width="50dp" font="{fontsize: '10dp'}" id = "logout" title="Log Out" onClick="Logout" />-->
 		</View>
-		<ListView>
-			<ListSection id="videolistview" dataCollection = "videos" onclick="viewVideo">
+		<ListView onItemclick="viewVideo" defaultItemTemplate="template">
+			<Templates>
+					<Require src="templates/videoitemtemplate" />
+			</Templates>
+			<ListSection id="videolistview" dataCollection="videos">
 				<Require src="videoitem" />
 			</ListSection>
 		</ListView>

@@ -1,4 +1,7 @@
 "ListItem": {
-	height:"60dp",
-	font: {fontSize: "30dp", fontWeight: "bold", fontColor:"#000"}
+	height: Alloy.Globals.styles.listitem_height,
+	width: Ti.UI.FILL,
+	font: {fontSize: "20dp", fontWeight: "bold"},
+	borderColor: "#FFF",
+	left: "25dp"
 }
