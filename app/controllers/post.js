@@ -1,6 +1,7 @@
 exports.sendData = function(endpoint, data, callback) {
-	
-	Alloy.Globals.progress.show();
+	if(Alloy.Globals.progress) {
+		Alloy.Globals.progress.show();
+	}
 	 
 	var url = Alloy.CFG.app_url + endpoint;
 	Ti.API.info("url: "+ url);
@@ -66,7 +67,9 @@ exports.sendData = function(endpoint, data, callback) {
 
 			 alert("Error:\n\nUnable to connect to server.");
 	         callback(false);
-	         Alloy.Globals.progress.hide();
+	         if(Alloy.Globals.progress) {
+	         	Alloy.Globals.progress.hide();
+	         }
 	     },
 	     timeout : 5000  // in milliseconds
 	 });

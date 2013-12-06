@@ -1,6 +1,6 @@
 {
 	"global": {
-		"app_url": "http://www.jannuslive.tv/",
+		"app_url": "http://s492515155.onlinehome.us/",
 		"login_path": "login.php",
 		"register_path": "register.php",
 		"videolist_path": "videolist.php",
@@ -16,7 +16,7 @@
 		"app_url": "http://s492515155.onlinehome.us/"
 	}, 
 	"env:production": {
-		"app_url": "http://www.jannuslive.tv/"
+		"app_url": "http://s492515155.onlinehome.us/"
 	}, 
 	"os:android": {},
 	"os:blackberry": {},

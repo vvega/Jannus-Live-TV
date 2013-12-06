@@ -6,5 +6,5 @@
 		url_thumb:image="{url_thumb}"
 		uploaded:text="{uploaded}"
 		duration:text="{duration}"
-		description:text="{description}" />
+		description:text="{description_truncated}" />
 </Alloy>

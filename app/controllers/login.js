@@ -1,5 +1,5 @@
 exports.doLogin = function(user, pass, callback) {
-	
+
 	Alloy.Globals.progress.setMessage(Ti.Locale.getString('logging_in'));
 	
     //build parameter JSON object 

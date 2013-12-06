@@ -1,13 +1,1 @@
-<Alloy>
-	<Window class="container">
-		<ScrollView>
-			<View>
-				<ImageView id="login_logo"></ImageView>
-				<TextField id="username" hintText="Enter Username"></TextField>
-				<TextField id="passwd" hintText="Enter Password" passwordMask="true"></TextField>
-				<Button id="login_btn" onClick="attemptLogin"></Button>
-				<Button id="register_btn" onClick="goToRegistration"></Button>
-			</View>
-		</ScrollView>
-	</Window>
-</Alloy>
+<Alloy></Alloy>

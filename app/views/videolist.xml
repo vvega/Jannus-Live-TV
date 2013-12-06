@@ -2,11 +2,29 @@
 	<Collection src="video" />
 	<Window class="container" id="videolist">
 		<View class = "header">
-			<!--<Button width="50dp" font="{fontsize: '10dp'}" id = "logout" title="Log Out" onClick="Logout" />-->
+			<Button id = "logout" title="Log Out" onClick="Logout" />
 		</View>
 		<ListView onItemclick="viewVideo" defaultItemTemplate="template">
 			<Templates>
-					<Require src="templates/videoitemtemplate" />
+				<ItemTemplate name="template" id="videoitemtemplate" >
+			        	<View class = "vertical" id="thumbnail_section">
+			      			<!--<Label bindid="episode" id="episode" />-->
+				        	<ImageView bindId="url_thumb" id="thumb" />
+					    </View>
+					    <View class ="horizontal">
+					        <View class = "vertical" id="description_section">
+						        <Label bindId="title" id="title" />
+						        <View class ="horizontal">
+							        <Label bindId="description" id="description" />
+							        <ImageView id='listarrow'></ImageView>
+							    </View>
+						    </View>
+						    <View class = "horizontal" id="time_section">
+						        <Label bindId="duration" id="duration" />
+						        <Label bindId="uploaded" id="uploaded" />					   
+						    </View>
+						</View>					
+				</ItemTemplate>
 			</Templates>
 			<ListSection id="videolistview" dataCollection="videos">
 				<Require src="videoitem" />

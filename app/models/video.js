@@ -55,13 +55,14 @@ exports.definition = {
 	
 						videos.push({
 							 "id" : video.id,
-							 "episode" : video.episode ,
+							 "episode" : (video.episode).toString(),
 					         "title" : video.title ,
 					         "url_vid" : "http://" + video.url + Alloy.CFG.vid_append,
 					         "url_thumb" : "http://" + video.url + Alloy.CFG.thumb_append,
 					         "uploaded" : video.uploaded,
 					         "duration" : prepareDuration(video.duration),
-					         "description" : video.description 
+					         "description" : video.description,
+					         "description_truncated" : truncateDescription(video.description) 
 						});
 					}
 					
@@ -78,6 +79,13 @@ exports.definition = {
         return Collection;
     }
 };
+function truncateDescription(descr) {
+	if(descr.length >= Alloy.Globals.max_description_chars) {
+		descr = descr.substring(0, Alloy.Globals.max_description_chars - 3);
+		descr += "...";
+	}
+	return descr;
+}
 function prepareDuration(duration) {
 	
 	var minutes = Math.floor(duration / 60);

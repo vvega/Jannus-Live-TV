@@ -3,27 +3,25 @@ if(args.$model){
 	 var dataJson=args.$model.toJSON();  
 }
 
-var dialog = Alloy.Globals.progress;
-
 /*////////////////////
  *  WINDOW LISTENERS
  *////////////////////
 $.videoview.addEventListener("open", function() {
 
-	if(dialog) {
+	if(Alloy.Globals.progress) {
 		
-		dialog.setMessage(Ti.Locale.getString("loading_episode"));
-		dialog.show();
+		Alloy.Globals.progress.setMessage(Ti.Locale.getString("loading_episode"));
+		Alloy.Globals.progress.show();
 		
 		$.video_player.addEventListener("loadstate", function() {
 			
 			if($.video_player){
 				if($.video_player.getLoadState() != 1) {
-					dialog.show();
+					Alloy.Globals.progress.show();
 				} else {
-					if(dialog) {
-						dialog.setCancelable(false);
-						dialog.hide();
+					if(Alloy.Globals.progress) {
+						Alloy.Globals.progress.setCancelable(false);
+						Alloy.Globals.progress.hide();
 					}
 					$.video_player.setMediaControlStyle(Ti.Media.VIDEO_CONTROL_EMBEDDED);
 				}

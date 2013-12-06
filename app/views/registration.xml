@@ -5,32 +5,31 @@
 		</View>
 		<ScrollView>			
 			<View>
-			
 				<Label textid="enter_username"></Label>
 				<Label class = "hint" textid="usernameHint"></Label>
-				<TextField id="username_register" value="testtest"></TextField>
+				<TextField id="username_register" ></TextField>
 				
 				<Label textid="enter_password"></Label>
 				<Label class = "hint" textid="passwordHint"></Label>
-				<TextField id="password_register" passwordMask="true" value="Test1234"></TextField>
+				<TextField id="password_register" passwordMask="true"></TextField>
 				
 				<Label textid="confirm_password"></Label>
-				<TextField id="passwordMatch" passwordMask="true" value="Test1234"></TextField>
+				<TextField id="passwordMatch" passwordMask="true"></TextField>
 				
 				<Label textid="enter_email"></Label>
 				<Label class = "hint" textid="emailHint"></Label>
-				<TextField id="email" value="test@gmail.com"></TextField>
+				<TextField id="email"></TextField>
 				
 				<Label textid="confirm_email"></Label>
-				<TextField id="emailMatch" value="test@gmail.com"></TextField>
+				<TextField id="emailMatch"></TextField>
 				
 				<Label class = "sectionTitle" textid="other_info"></Label>
 				
 				<Label textid="first_name"></Label>
-				<TextField id="firstname" value="test"></TextField>
+				<TextField id="firstname"></TextField>
 				
 				<Label textid = "last_name"></Label>
-				<TextField id="lastname" value="test"></TextField>
+				<TextField id="lastname"></TextField>
 				
 				<Label textid="country_label"></Label>
 				<Picker id = "countryPicker"></Picker>
@@ -52,7 +51,7 @@
 				
 				<Label textid="referral_label"></Label>
 				<Picker id = "referralPicker"></Picker>
-				<TextField id="other" value="test"></TextField>
+				<TextField id="other"></TextField>
 							  
 			    <Button id="registration_submit" titleid="registration_submit" onClick="submitRegistration"></Button>
 			

@@ -23,10 +23,9 @@
 	height: Alloy.Globals.styles.textfield_height,
 	top: "10dp",
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-	borderRadius: "5dp",
+	borderRadius: 20,
 	backgroundColor: Alloy.Globals.styles.textfield_bg_color,
 	borderColor: Alloy.Globals.styles.textfield_border_color,
-	borderRadius: 5,
 	borderWidth: Alloy.Globals.styles.textfield_border_width,
 	color: Alloy.Globals.styles.textfield_text_color
 },
@@ -35,7 +34,7 @@
 	height: Alloy.Globals.styles.button_height,
 	top: "10dp",
 	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-	borderRadius: 5,
+	borderRadius: 20,
 	borderWidth: Alloy.Globals.styles.textfield_border_width,
 	font: Alloy.Globals.styles.button_font,
 	backgroundGradient: Alloy.Globals.styles.jannus_gradient
@@ -49,7 +48,13 @@
 	font: Alloy.Globals.styles.title_font,
 	color: "#333",
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
-	top: "16dp"
+	top: "8dp"
+},
+".vertical": {
+	layout: "vertical"
+},
+".horizontal": {
+	layout: "horizontal"
 },
 ".ldpi": {
 	font: {fontSize: '9dp', fontWeight: 'normal' }

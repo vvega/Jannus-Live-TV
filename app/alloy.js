@@ -22,19 +22,19 @@ var pWidth = Ti.Platform.displayCaps.platformWidth;
 var pHeight = Ti.Platform.displayCaps.platformHeight;
 Ti.App.SCREEN_WIDTH = (pWidth > pHeight) ? pHeight : pWidth;
 Ti.App.SCREEN_HEIGHT = (pWidth > pHeight) ? pWidth : pHeight;
+Alloy.Globals.initialized = false;
 
-Alloy.Globals.sessionMgr = Alloy.createController("session");
-Alloy.Globals.ajaxClient = Alloy.createController("post");
+Alloy.Globals.max_description_chars = 91;
 
 /*//////////////////
  *  Global Styles
  *//////////////////
 Alloy.Globals.styles = {
-	logo_height: parseInt(Ti.App.SCREEN_HEIGHT/2) - 20,
+	logo_height: parseInt(Ti.App.SCREEN_HEIGHT/2) - 40,
 	label_height: "20dp",
 	textfield_height: "60dp",
 	button_height: "60dp",
-	header_height: "65dp",
+	header_height: "55dp",
 	standard_margin: "15dp",
 	entry_fields_width: Ti.App.SCREEN_WIDTH - 30,
 	textfield_bg_color: "#120d01",
@@ -43,7 +43,8 @@ Alloy.Globals.styles = {
 	textfield_border_width: 3,
 	portrait_video_width: Ti.App.SCREEN_WIDTH,
 	portrait_video_height: parseInt((Ti.App.SCREEN_WIDTH * 9)/16) + 40,
-	listitem_height: "60dp",
+	listitem_height: "110dp",
+	listitem_description_width: Ti.App.SCREEN_WIDTH/2 - 10,
 	button_font: {fontSize: "30dp", fontWeight: "bold"},
 	title_font: {fontSize: "25dp", fontWeight: "bold"},
 	subtitle_font: {fontSize: "20dp", fontweight: "bold"},
@@ -62,5 +63,13 @@ Alloy.Globals.progress = Ti.UI.Android.createProgressIndicator({
 	  message: Ti.Locale.getString('loading'),
 	  location: Ti.UI.Android.PROGRESS_INDICATOR_DIALOG,
 	  type: Ti.UI.Android.PROGRESS_INDICATOR_INDETERMINANT,
-	  cancelable: false
+	  cancelable: false,
+	  bubbleParent: false,
+	  max: 6
 	});
+
+/*//////////////////////////////////////////////////////////////////
+ *  Global Controllers (must be initialized after all other values)
+ *//////////////////////////////////////////////////////////////////
+Alloy.Globals.sessionMgr = Alloy.createController("session");
+Alloy.Globals.ajaxClient = Alloy.createController("post");

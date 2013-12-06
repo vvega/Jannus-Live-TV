@@ -1,8 +1,7 @@
 //orientation fix
-//$.registration.orientationModes=[Titanium.UI.PORTRAIT];
+$.registration.orientationModes=[Titanium.UI.PORTRAIT];
 
 var viewInitialized = false;
-
 
 function confirmDialog() {
 	var confirm = Titanium.UI.createAlertDialog({
@@ -15,7 +14,6 @@ function confirmDialog() {
     });
   	confirm.show();
 }
-
 function populateDropdown(dropdown, collection) {
 	
 	//assign values to dropdown
@@ -108,9 +106,10 @@ function submitRegistration() {
  *  WINDOW LISTENERS
  *////////////////////
 $.registration.addEventListener("open", function() {
+
+		Alloy.Globals.progress.setMessage(Ti.Locale.getString('loading_form'));	
+		Alloy.Globals.progress.show();
 	
-	Alloy.Globals.progress.setMessage(Ti.Locale.getString('loading_form'));	
-	Alloy.Globals.progress.show();
 	
 	//initialize this view in the event it has not been accessed/prepared before
 	if(!viewInitialized) {		
@@ -123,12 +122,12 @@ $.registration.addEventListener("open", function() {
 		viewInitialized = true;
 	}
 	
-	Alloy.Globals.progress.hide();
+		Alloy.Globals.progress.hide();
 });
 $.registration.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks
-   $.destroy();
+	$.destroy();
 });
-
-
- 
+$.registration.addEventListener("android:back", function() {
+	$.registration.close();
+});

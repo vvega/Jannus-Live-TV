@@ -1,16 +1,13 @@
 //Login Styling
-".container":{
-	exitOnClose: true
-},
 "#login_logo": {
 	top: "5dp",
-	image: "/images/jannus_logo.png",
-	height: Alloy.Globals.styles.logo_height
+	image: "/images/jltv_logo.png",
+	height: Alloy.Globals.logo_height
 },
 "#username": {
-	top: "20dp",
+	top: "20dp"
 },
-"#password": {
+"#passwd": {
 	passwordMask: "true"
 },
 "#login_btn": {
