@@ -1,9 +1,9 @@
-#appname: JLTV
-#appid: tv.jannuslive.jltv
-#type: mobile
-#guid: aa25d243-8fd7-4cdf-926f-0e51679f7413
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:JLTV
+#appid:tv.jannuslive.jltv
+#type:mobile
+#guid:aa25d243-8fd7-4cdf-926f-0e51679f7413
+#version:1.0
+#publisher:Veronica Vega
+#url:http://www.jannuslive.tv
+#image:appicon.png
+#desc:Jannus Live TV (v. 1.00): Broadcast of remote content recorded at Jannus Landing.
