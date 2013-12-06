@@ -1,1 +1,11 @@
-Place your change log text here.  This file will be incorporated with your app at package time.
+Jannus Live TV
+v.1.00) Initial functionality includes:
+	-	Registration System
+	-	Login System
+	-	Video List Retrieval
+	-	Video Viewing
+		a)	Portrait layout
+		b)	Landscape layout
+	-	Device-specific sessions
+	-	Logout capability/clear session
+	
