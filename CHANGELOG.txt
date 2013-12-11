@@ -9,7 +9,7 @@ v.1.00) Initial functionality includes:
 	-	Device-specific sessions
 	-	Logout capability/clear session
 	
-v.1.01) Changes:
+v.1.10) Changes:
 	-	Fixed crashes for Android versions 4.2.x by placing background graphic within the root images folder.
 	-	Created timeout for video viewing load dialog.
 	-	Created scalable layout margins based on screen width.
