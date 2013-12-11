@@ -2,7 +2,7 @@ var args=arguments[0]||{};
 if(args.$model){  
 	 var dataJson=args.$model.toJSON();  
 }
-
+var dialogTimeout = null;
 /*////////////////////
  *  WINDOW LISTENERS
  *////////////////////
@@ -80,6 +80,16 @@ $.videoview.addEventListener("open", function() {
 });
 $.videoview.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks
+	if(dialogTimeout) {
+		clearTimeout(dialogTimeout);
+	}
+});
+$.videoview.addEventListener("open", function (){
+	dialogTimeout = setTimeout(function(){
+		if(Alloy.Globals.progress) {
+	  	 	Alloy.Globals.progress.hide();
+	  	 }
+	}, 10000);
 });
 $.videoview.addEventListener("android:back", function() {
 	//clean data binding to prevent memory leaks

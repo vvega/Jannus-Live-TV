@@ -35,7 +35,7 @@ Alloy.Globals.styles = {
 	textfield_height: "60dp",
 	button_height: "60dp",
 	header_height: "55dp",
-	standard_margin: "15dp",
+	standard_margin: parseInt(Ti.App.SCREEN_WIDTH/30),
 	entry_fields_width: Ti.App.SCREEN_WIDTH - 30,
 	textfield_bg_color: "#120d01",
 	textfield_border_color: "#b77d0c",
@@ -64,8 +64,7 @@ Alloy.Globals.progress = Ti.UI.Android.createProgressIndicator({
 	  location: Ti.UI.Android.PROGRESS_INDICATOR_DIALOG,
 	  type: Ti.UI.Android.PROGRESS_INDICATOR_INDETERMINANT,
 	  cancelable: false,
-	  bubbleParent: false,
-	  max: 6
+	  bubbleParent: false
 	});
 
 /*//////////////////////////////////////////////////////////////////

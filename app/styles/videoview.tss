@@ -27,7 +27,7 @@
 	width: Ti.UI.FILL
 },
 "#episode_title": {
-	left: "20dp",
+	left: Alloy.Globals.styles.standard_margin,
 	right: "8dp"
 },
 "#video_title": {
@@ -42,8 +42,8 @@
 "#description": {
 	layout: "vertical",
 	font: {fontSize: "16dp"},
-	left: "15dp",
-	right: "15dp",
+	left: Alloy.Globals.styles.standard_margin,
+	right: Alloy.Globals.styles.standard_margin,
 	width: "auto",
 	height: "auto"
 },
@@ -52,12 +52,12 @@
 },
 ".detail_label": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
-	font: {fontSize: "16dp", fontWeight: "bold"},
+	font: {fontSize: "14dp", fontWeight: "bold"},
 	color: "#ffbf0f",
-	left: "15dp",
+	left: Alloy.Globals.styles.standard_margin,
 	right: "5dp"
 },
 "ScrollView": {
-	top: "15dp",
+	top: Alloy.Globals.styles.standard_margin,
 	layout: "vertical"
 }

@@ -24,7 +24,7 @@
 "#thumb":{
 	width: "110dp",
 	height: "90dp",
-	left: "15dp",
+	left: Alloy.Globals.styles.standard_margin,
 	top: "0",
 	borderColor: "#666",
 	borderWidth: 1,
