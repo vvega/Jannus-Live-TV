@@ -7,6 +7,9 @@
 	backgroundColor:"black",
 	backgroundImage: "/images/background.png"
 },
+"Switch": {
+	style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX
+},
 "View":{
 	height: Ti.UI.SIZE,
 	layout: "vertical"
@@ -37,6 +40,7 @@
 	borderRadius: 20,
 	borderWidth: Alloy.Globals.styles.textfield_border_width,
 	font: Alloy.Globals.styles.button_font,
+	color: Alloy.Globals.styles.button_font_color,
 	backgroundGradient: Alloy.Globals.styles.jannus_gradient
 },
 ".header": {

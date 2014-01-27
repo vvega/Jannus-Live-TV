@@ -2,10 +2,10 @@
 "#login_logo": {
 	top: "5dp",
 	image: "/images/jltv_logo.png",
-	height: Alloy.Globals.logo_height
+	width: Alloy.Globals.styles.logo_width
 },
 "#username": {
-	top: "20dp"
+	top: "30dp"
 },
 "#passwd": {
 	passwordMask: "true"
@@ -15,6 +15,6 @@
 	titleid: "login_button"
 },
 "#register_btn": {
-	bottom: "10dp",
+	bottom: "5dp",
 	titleid: "register_button"
 }

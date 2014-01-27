@@ -50,9 +50,14 @@ function createCollectionFromLocalJSON(model, jsonFile) {
 
 function setDropdownListener(picker, valueForChange, hiddenView) {
 	
+	//account for picker bug
+	 picker.setSelectedRow(0, 1, false);
+ 	 picker.setSelectedRow(0, 0, false);
+	
 	//set textfield visibility based on current picker selection
 	picker.addEventListener("change", function() {
 		var pickerValue = picker.getSelectedRow(0).value;
+		Ti.API.info("pickerValue:"+pickerValue+" picker.getSelectedRow(0).value:"+picker.getSelectedRow(0).value);
 		if(pickerValue == valueForChange) {
 			hiddenView.setVisible(true);
 			hiddenView.setHeight("60dp");
@@ -95,12 +100,16 @@ function submitRegistration() {
 	
 	
 	var registerController = Alloy.createController('register');
-	registerController.doRegistration(params, function(success) {
-		if(success) {
+	registerController.doRegistration(params, function(result) {
+		if(result == Alloy.Globals.SUCCESS) {
 			confirmDialog();
 		}		
 	});
 }
+
+exports.goToRegistration = function() {
+	$.registration.open();
+};
 
 /*////////////////////
  *  WINDOW LISTENERS
@@ -109,8 +118,7 @@ $.registration.addEventListener("open", function() {
 
 		Alloy.Globals.progress.setMessage(Ti.Locale.getString('loading_form'));	
 		Alloy.Globals.progress.show();
-	
-	
+		
 	//initialize this view in the event it has not been accessed/prepared before
 	if(!viewInitialized) {		
 		populateDropdown($.countryPicker, createCollectionFromLocalJSON("surveydata", "countries"));
@@ -122,7 +130,7 @@ $.registration.addEventListener("open", function() {
 		viewInitialized = true;
 	}
 	
-		Alloy.Globals.progress.hide();
+	Alloy.Globals.progress.hide();
 });
 $.registration.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks

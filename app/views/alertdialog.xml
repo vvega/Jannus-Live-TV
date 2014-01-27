@@ -1,0 +1,14 @@
+<Alloy>
+	<Window>
+		<View class="dialog_container">
+	            <View class = "header" id="alert_header">
+	           		 <Label class="header_label" id="alert_header_label" text="Incorrect Password" />
+	            </View>
+	            <Label text = "You can reset it by entering your email in the box below and selecting 'Reset Password'." />
+				 <!-- The ButtonNames tag sets the buttonNames property. -->
+			    <TextField id="reset_email" hintText="Enter email."></TextField>
+				<Button class = "alertbutton" title = "Reset Password" onClick="handleReset" />
+				<Button id = "cancel_alert" class = "alertbutton" title = "Cancel" onClick="closeWindow" />
+		</View>
+	</Window>
+</Alloy>

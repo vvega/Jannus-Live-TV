@@ -4,7 +4,7 @@ exports.sendData = function(endpoint, data, callback) {
 	}
 	 
 	var url = Alloy.CFG.app_url + endpoint;
-	Ti.API.info("url: "+ url);
+	//Ti.API.info("url: "+ url);
 	 
 	var client = Ti.Network.createHTTPClient({
 	     
@@ -12,25 +12,41 @@ exports.sendData = function(endpoint, data, callback) {
 	     onload : function(e) {
 
 	        var data = JSON.parse(this.responseData);
-	        Ti.API.info("data: "+JSON.stringify(data));
+	        var callback_value = Alloy.Globals.SUCCESS;
+	        
+	        //Ti.API.info("data: "+JSON.stringify(data));
 
 	        if(data.error_type != 0) {
-	        	Ti.API.info("ERROR!!");
-	        	var error_message = "";
+				
+				callback_value = Alloy.Globals.FAILURE;
+				
+	        	var errorString = "Error:\n\n";
+	        	
 	        	switch(data.error_type) {
 	        		case 1:
 	        		case 2:
 	        		case 4:
-	        			alert("Error:\n\nRemote server error. Please try again later.");
-	        			break;
-	        		case 3:
-	        			var errorString = "Error:\n\n";
-	      
+	        			if(data.email_valid_error) {
+	        				errorString += "> "+ data.email_valid_error + "\n";
+	        			} else {
+	        				errorString += "Remote server error. Please try again later.";
+	        			}	  
+	        			alert(errorString);	    
+	        			break;   			
+	        		case 3:	        			
 	        		    if(data.username_error) {
 	        		    	errorString += "> "+ data.username_error + "\n";
 	        		    }
-	        		    if(data.password_error) {
+	        		   	if(data.password_match_error) {
+	        		    	//show reset dialog
+	        		    	callback_value = Alloy.Globals.PASSWORD_FAILURE;
+	        		    	break;
+	        		    }
+	        		   	if(data.password_error) {
 	        		    	errorString += "> "+ data.password_error + "\n";
+	        		    }
+	        		    if(data.account_error) {
+	        		    	errorString += "> "+ data.account_error + "\n";
 	        		    }
 	        		    if(data.email_error) {
 	        		    	errorString += "> "+ data.email_error + "\n";
@@ -41,19 +57,20 @@ exports.sendData = function(endpoint, data, callback) {
 	        		    if(data.zip_error) {
 	        		    	errorString += "> "+ data.zip_error + "\n";
 	        		    }
-	        			alert(errorString);
+	        		    if(data.firstname_error) {
+	        		    	errorString += "> "+ data.firstname_error + "\n";
+	        		    }
+	        		    if(data.lastname_error) {
+	        		    	errorString += "> "+ data.lastname_error + "\n";
+	        		    }	     
+	        		    alert(errorString);	    	
 	        			break;
 	        		default:
 	        			break;
-	        	}
+	        	}      		           	
+	        } 
 	        	
-	        	callback(false);
-	        	
-	        } else {
-	        	
-	        	callback(true);
-	        	
-	        }
+	       callback(callback_value);	        
 	        
 	       if(Alloy.Globals.progress) {
 				try{ Alloy.Globals.progress.hide(); } catch(error) {};

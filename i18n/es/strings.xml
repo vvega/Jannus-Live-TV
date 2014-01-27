@@ -37,4 +37,6 @@
     <string name="duration_label">Duration: </string>
     <string name="uploaded_label">Uploaded: </string>
     <string name="description_label">Description: </string>
+    <string name="quality_label">HQ:</string>
+    <string name="checking_email">Checking Email...</string>
 </resources>

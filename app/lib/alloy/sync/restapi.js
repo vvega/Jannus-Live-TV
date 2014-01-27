@@ -32,7 +32,7 @@ function apiCall(_options, _callback) {
             'success' : false,
             'responseText' : xhr.responseText
         });
-        Ti.API.error('[REST API] apiCall ERROR: ' + xhr.responseText);
+        //Ti.API.error('[REST API] apiCall ERROR: ' + xhr.responseText);
     };
     for (var header in _options.headers) {
         xhr.setRequestHeader(header, _options.headers[header]);
@@ -65,7 +65,7 @@ function Sync(method, model, opts) { //debugger;
     if (!params.url) {
         params.url = model.url();
         if (!params.url) {
-            Ti.API.error("[REST API] ERROR: NO BASE URL");
+           // Ti.API.error("[REST API] ERROR: NO BASE URL");
             return;
         }
     }
@@ -110,7 +110,7 @@ function Sync(method, model, opts) { //debugger;
                     params.success(data, _response.responseText);
                 } else {
                     params.error(JSON.parse(_response.responseText), _response.responseText);
-                    Ti.API.error('[REST API] ERROR: ' + _response.responseText);
+                   // Ti.API.error('[REST API] ERROR: ' + _response.responseText);
                 }
             });
             break;

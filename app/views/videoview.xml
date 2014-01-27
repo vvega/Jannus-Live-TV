@@ -1,8 +1,11 @@
 <Alloy>
 	<Window class="container" id="videoview">
-		<View class = "header" id = "video_header">
-			<Label class = "header_label" id="episode_title" textid="episode_label" />
-			<Label class = "header_label" text="{episode}" />
+		<View class = "header" id="video_header">
+			<View id = "episode_container">
+				<Label class = "header_label" id="episode_title" textid="episode_label" />
+				<Label class = "header_label" text="{episode}" />
+			</View>
+			<!--<Button id = "settings" title="Settings"  />-->
 		</View>
 		<View id="video_title">
 			<Label id="video_title_label" class="detail_label" text="{title}" />
@@ -14,6 +17,7 @@
 			<View id = "details_section">
 				<Label class="detail_label" textid="duration_label" /><Label id="duration" text="{duration}" />
 				<Label class="detail_label" textid="uploaded_label" /><Label id="uploaded" text="{uploaded}" />
+				<Switch id="quality" value="false" titleOn="HQ" titleOff="HQ" />
 			</View>
 			<Label id="description" text="{description}" />
 		</ScrollView>

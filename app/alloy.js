@@ -23,24 +23,35 @@ var pHeight = Ti.Platform.displayCaps.platformHeight;
 Ti.App.SCREEN_WIDTH = (pWidth > pHeight) ? pHeight : pWidth;
 Ti.App.SCREEN_HEIGHT = (pWidth > pHeight) ? pWidth : pHeight;
 Alloy.Globals.initialized = false;
-
 Alloy.Globals.max_description_chars = 91;
+Alloy.Globals.FAILURE = 0;
+Alloy.Globals.SUCCESS = 1;
+Alloy.Globals.PASSWORD_FAILURE = 2;
+Alloy.Globals.animation = require('alloy/animation');
+
 
 /*//////////////////
  *  Global Styles
  *//////////////////
 Alloy.Globals.styles = {
 	logo_height: parseInt(Ti.App.SCREEN_HEIGHT/2) - 40,
+	logo_width: parseInt(Ti.App.SCREEN_WIDTH - 80),
+	dialog_height: parseInt(Ti.App.SCREEN_HEIGHT/2),
 	label_height: "20dp",
 	textfield_height: "60dp",
 	button_height: "60dp",
 	header_height: "55dp",
 	standard_margin: parseInt(Ti.App.SCREEN_WIDTH/30),
+	hq_button_margin: parseInt(Ti.App.SCREEN_WIDTH - 70),
 	entry_fields_width: Ti.App.SCREEN_WIDTH - 30,
+	alert_entry_fields_width: Ti.App.SCREEN_WIDTH - 60,
 	textfield_bg_color: "#120d01",
 	textfield_border_color: "#b77d0c",
 	textfield_text_color: "#FFF",
 	textfield_border_width: 3,
+	button_font_color: "#120d01",
+	dialog_border_color: "#CCC",
+	hq_label_width:  Ti.App.SCREEN_WIDTH - 60,
 	portrait_video_width: Ti.App.SCREEN_WIDTH,
 	portrait_video_height: parseInt((Ti.App.SCREEN_WIDTH * 9)/16) + 40,
 	listitem_height: "110dp",
@@ -51,6 +62,12 @@ Alloy.Globals.styles = {
 	jannus_gradient: {
 		type:'linear',
 		colors:['#ffbf0f','#b53513'],
+		startPoint:{x:0,y:0},
+		endPoint:{x:0,y:130},
+	},
+	alert_gradient: {
+		type:'linear',
+		colors:['#555','#999'],
 		startPoint:{x:0,y:0},
 		endPoint:{x:0,y:130},
 	}
@@ -66,9 +83,23 @@ Alloy.Globals.progress = Ti.UI.Android.createProgressIndicator({
 	  cancelable: false,
 	  bubbleParent: false
 	});
+	
+/*TODO: Update progress indicator 
+ * Alloy.Globals.progress = Ti.UI.createActivityIndicator({
+	  message: Ti.Locale.getString('loading'),
+	  style: Titanium.UI.ActivityIndicatorStyle.PLAIN, 
+	  height: "100dp",
+	  width: Alloy.Globals.styles.logo_width,
+	  bubbleParent: false
+	});*/
+
+
+//TODO: Create iOS branching version for progress dialog & 
+// potentially an encapsulated controller
 
 /*//////////////////////////////////////////////////////////////////
  *  Global Controllers (must be initialized after all other values)
  *//////////////////////////////////////////////////////////////////
 Alloy.Globals.sessionMgr = Alloy.createController("session");
 Alloy.Globals.ajaxClient = Alloy.createController("post");
+Alloy.Globals.networkMgr = Alloy.createController("network");

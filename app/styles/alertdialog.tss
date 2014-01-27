@@ -1,0 +1,33 @@
+"Window": {
+	navBarHidden: true,
+	modal: true,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+},
+".dialog_container": {
+	opacity: 1,
+	borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	borderRadius: 20,
+	borderWidth: 1,
+	borderColor: Alloy.Globals.styles.dialog_border_color,
+	width: Alloy.Globals.styles.entry_fields_width,
+	backgroundColor: Alloy.Globals.styles.textfield_bg_color
+},
+"#alert_header": {
+	backgroundGradient: Alloy.Globals.styles.alert_gradient
+},
+"#alert_header_label": {
+	color: "#CCC"
+},
+".alertbutton": {
+	width: Alloy.Globals.styles.alert_entry_fields_width
+	
+},
+"#reset_email": {
+	width: Alloy.Globals.styles.alert_entry_fields_width
+},
+"#cancel_alert": {
+	bottom: "10dp",
+	backgroundGradient: Alloy.Globals.styles.alert_gradient,
+	color: "#CCC"
+}

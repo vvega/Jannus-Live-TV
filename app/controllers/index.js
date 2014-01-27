@@ -1,3 +1,4 @@
+//$.index.open();
 if(Alloy.Globals.sessionMgr.sessionExists()) {	
 	
 	//go to video list if active session exists
@@ -5,8 +6,9 @@ if(Alloy.Globals.sessionMgr.sessionExists()) {
 	videoListMgr.populateList();
 	
 } else if(!Alloy.Globals.initialized) {
-	
+
 	var loginPage = Alloy.createController("loginpage");
 	loginPage.getView().open();
 	Alloy.Globals.initialized = true;
 }
+

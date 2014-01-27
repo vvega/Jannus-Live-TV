@@ -2,10 +2,12 @@
 	"global": {
 		"app_url": "http://s492515155.onlinehome.us/",
 		"login_path": "login.php",
+		"reset_password_path": "sendresetemail.php",
 		"register_path": "register.php",
 		"videolist_path": "videolist.php",
 		"client" : "mobile_app",
 		"vid_append": "video.mp4",
+		"vid_hi_append" : "hdvideo.mp4",
 		"thumb_append": "thumbnail.jpg"
 		
 	}, 

@@ -9,5 +9,15 @@
 				<Button id="register_btn" onClick="goToRegistration"></Button>
 			</View>
 		</ScrollView>
+		<AlertDialog id="alertdialog" title="Incorrect Password" onClick="handleDialog"
+            message="Do you wish to reset it?" cancel="1">
+			 <!-- The ButtonNames tag sets the buttonNames property. -->
+		    <TextField id="reset_email"></TextField>
+		    <ButtonNames>
+		        <ButtonName>Confirm</ButtonName>
+		        <ButtonName>Cancel</ButtonName>
+		        <ButtonName>Help</ButtonName>
+		    </ButtonNames>
+		</AlertDialog>
 	</Window>
 </Alloy>

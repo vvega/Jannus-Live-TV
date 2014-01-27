@@ -26,7 +26,7 @@ exports.populateList = function() {
    Alloy.Collections.videos.fetch({
    	 
 	    success : function(model, resp) {
-	       	   $.videolist.open();
+	      $.videolist.open();
 		},
 		
 	    error : function(model, resp) {
@@ -50,5 +50,10 @@ $.videolist.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks
 });
 $.videolist.addEventListener("android:back", function() {
-	//clean data binding to prevent memory leaks
+	//"home" button functionality. Leave app runnning in background.
+	var intent = Ti.Android.createIntent({
+        action: Ti.Android.ACTION_MAIN
+    });
+    intent.addCategory(Ti.Android.CATEGORY_HOME);
+    Ti.Android.currentActivity.startActivity(intent);
 });

@@ -12,12 +12,6 @@
 "View":{
 	layout: "horizontal"
 },
-"#video_header": {
-	layout: "horizontal"
-},
-".video_content": {
-	top: "10dp"
-},
 "Label": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	left: "0"
@@ -33,7 +27,8 @@
 "#video_title": {
 	layout: "vertical",
 	top: Alloy.Globals.styles.standard_margin,
-	bottom: Alloy.Globals.styles.standard_margin
+	bottom: Alloy.Globals.styles.standard_margin,
+	left: Alloy.Globals.styles.standard_margin,
 },
 "#video_title_label": {
 	font: Alloy.Globals.styles.subtitle_font,
@@ -48,16 +43,43 @@
 	height: "auto"
 },
 "#details_section": {
+	left: Alloy.Globals.styles.standard_margin,
 	bottom: "10dp"
 },
 ".detail_label": {
 	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
 	font: {fontSize: "14dp", fontWeight: "bold"},
 	color: "#ffbf0f",
-	left: Alloy.Globals.styles.standard_margin,
-	right: "5dp"
+	right: "1dp"
+},
+".header": {
+	layout: "vertical"
+},
+"#duration": {
+	right: "5dp",
+	font: {fontSize: "14dp"}
+},
+"#uploaded": {
+	font: {fontSize: "14dp"}
 },
 "ScrollView": {
 	top: Alloy.Globals.styles.standard_margin,
 	layout: "vertical"
+},
+"#quality": {
+	left: "5dp",
+	style: Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON,
+	color: "#ffbf0f",
+	font: {fontSize: "10sp", fontWeight: "bold"},
+	height: "30dp"
+},
+"#settings": {
+	backgroundColor: "#00000000",
+	borderWidth: 1,
+	borderRadius: 0,
+	borderColor: "#000",
+	width: "120dp",
+	right: "0",
+	height: Ti.UI.FILL,
+	font: {fontSize: "16sp", fontWeight: "bold"}
 }

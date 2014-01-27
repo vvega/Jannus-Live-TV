@@ -10,13 +10,17 @@ function attemptLogin() {
 	if($.username.value && $.passwd.value) {				
 		
 		
-		loginController.doLogin($.username.value, $.passwd.value, function(success) {
+		loginController.doLogin($.username.value, $.passwd.value, function(result) {
 			
-			if(success) {
+			if(result == Alloy.Globals.SUCCESS) {
 
 				Alloy.Globals.sessionMgr.startSession($.username.value);
 				var videoListMgr = Alloy.createController("videolist");
-				videoListMgr.populateList();	
+				videoListMgr.populateList();
+					
+			} else if(result == Alloy.Globals.PASSWORD_FAILURE) {
+				var alertDialog = Alloy.createController("alertdialog");
+				alertDialog.showDialog();
 			}
 			
 		});
@@ -29,11 +33,18 @@ function attemptLogin() {
 		}
 	}	
 }
+
 function goToRegistration() {
 	
 	var registrationController = Alloy.createController("registration");
-	registrationController.getView().open();
-	$.destroy();	
+	//Alloy.Globals.progress.setMessage("Going to registration page...");
+	//Alloy.Globals.progress.show();
+	registrationController.goToRegistration();
+}
+
+function handleDialog() {
+	alert($.reset_email.getValue());
+	$.dialog.close();
 }
 
 /*////////////////////
@@ -41,6 +52,7 @@ function goToRegistration() {
  *////////////////////
  	
 $.loginpage.addEventListener("close", function() {
+	$.destroy();	
 });
 $.loginpage.addEventListener("open", function() {
 });
