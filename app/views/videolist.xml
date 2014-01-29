@@ -6,12 +6,12 @@
 		</View>
 		<ListView onItemclick="viewVideo" defaultItemTemplate="template">
 			<Templates>
-				<ItemTemplate name="template" id="videoitemtemplate" >
-			        	<View class = "vertical" id="thumbnail_section">
+				<ItemTemplate name="template" id="videoitemtemplate" bubbleParent="true" >
+			        	<View class = "vertical" id="thumbnail_section" bubbleParent="true">
 			      			<!--<Label bindid="episode" id="episode" />-->
 				        	<ImageView bindId="url_thumb" id="thumb" />
 					    </View>
-					    <View class ="horizontal">
+					    <View class ="horizontal" bubbleParent="true" >
 					        <View class = "vertical" id="description_section">
 						        <Label bindId="title" id="title" />
 						        <View class ="horizontal">

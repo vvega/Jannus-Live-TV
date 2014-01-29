@@ -7,18 +7,24 @@ function attemptLogin() {
 	
 	var loginController = Alloy.createController("login");
 	
-	if($.username.value && $.passwd.value) {				
-		
-		
+	if($.username.value && $.passwd.value) {	
+	
 		loginController.doLogin($.username.value, $.passwd.value, function(result) {
 			
-			if(result == Alloy.Globals.SUCCESS) {
-
-				Alloy.Globals.sessionMgr.startSession($.username.value);
+			if(Alloy.Globals.progress) { Alloy.Globals.progress.hide(); }
+			
+			if(result.message == Alloy.Globals.SUCCESS) {
+				
+				var sessionData = {
+					username: $.username.value,
+					sessionID: result.data.sessionID
+				};
+				
+				Alloy.Globals.sessionMgr.startSession(sessionData);
 				var videoListMgr = Alloy.createController("videolist");
 				videoListMgr.populateList();
 					
-			} else if(result == Alloy.Globals.PASSWORD_FAILURE) {
+			} else if(result.message == Alloy.Globals.PASSWORD_FAILURE) {
 				var alertDialog = Alloy.createController("alertdialog");
 				alertDialog.showDialog();
 			}
@@ -28,17 +34,13 @@ function attemptLogin() {
 	} else {								
 		
 		alert("Error:\n\nPlease enter valid login information.");			
-		if(Alloy.Globals.progress) {
-			Alloy.Globals.progress.hide();	
-		}
+		
 	}	
 }
 
 function goToRegistration() {
 	
 	var registrationController = Alloy.createController("registration");
-	//Alloy.Globals.progress.setMessage("Going to registration page...");
-	//Alloy.Globals.progress.show();
 	registrationController.goToRegistration();
 }
 
@@ -50,7 +52,20 @@ function handleDialog() {
 /*////////////////////
  *  WINDOW LISTENERS
  *////////////////////
- 	
+$.login_btn.addEventListener('touchstart', function(){
+	this.setBackgroundGradient(null);
+    this.setBackgroundColor('#cccccc');
+ });	
+$.register_btn.addEventListener('touchstart', function(){
+	this.setBackgroundGradient(null);
+    this.setBackgroundColor('#cccccc');
+ });
+$.login_btn.addEventListener('touchend', function(){
+    this.setBackgroundGradient(Alloy.Globals.styles.jannus_gradient);
+ });	
+$.register_btn.addEventListener('touchend', function(){
+     this.setBackgroundGradient(Alloy.Globals.styles.jannus_gradient);
+ });
 $.loginpage.addEventListener("close", function() {
 	$.destroy();	
 });

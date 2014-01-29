@@ -3,6 +3,15 @@
 	width: Ti.UI.FILL,
 	height: Ti.UI.FILL
 },
+"ListItem": {
+	backgroundSelectedColor: "#55f19f2e"
+},
+"#videoitemtemplate": {
+	backgroundSelectedColor: "#55f19f2e"
+},
+"Templates":{
+	backgroundSelectedColor: "#55f19f2e"
+},
 ".header": {
 	layout: "vertical"
 },

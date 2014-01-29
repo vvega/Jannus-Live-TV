@@ -14,3 +14,17 @@ v.1.10) Changes:
 	-	Created timeout for video viewing load dialog.
 	-	Created scalable layout margins based on screen width.
 	
+		
+v.1.11) Changes:
+	-	New graphics included for app icon and loading screens
+	-	Functionality created for viewing video in HQ
+	-	Implemented password reset system
+	-	User/total views are now tracked within the database
+	-	Separated loading dialogs from post.js. Now handled within view controllers.
+	-	Added button press graphical functionality
+	-	"Favorite" icons added for future favoriting functionality
+	-	Consolidated local data loading to alloy.js in order to speed up registration page load
+	-	Removed extraneous alertdialog markup in loginpage.xml
+	-	Added check for all progressdialog actions to prevent any related nullpointerexceptions
+	
+	

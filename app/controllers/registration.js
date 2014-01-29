@@ -1,8 +1,6 @@
 //orientation fix
 $.registration.orientationModes=[Titanium.UI.PORTRAIT];
 
-var viewInitialized = false;
-
 function confirmDialog() {
 	var confirm = Titanium.UI.createAlertDialog({
         title: 'Success!',
@@ -20,8 +18,6 @@ function populateDropdown(dropdown, collection) {
 	for(var i = 0; i < collection.length; i++) {
 		dropdown.add(Ti.UI.createPickerRow({title: collection.at(i).get('text'), value: collection.at(i).get('value')}));
 	}
-	
-	collection.reset();
 }
 
 function populateCheckboxes(view, collection) {
@@ -35,17 +31,6 @@ function populateCheckboxes(view, collection) {
 										 style: Ti.UI.Android.SWITCH_STYLE_CHECKBOX,
 										 width: "120dp"}));
 	}
-	
-	collection.reset();
-}
-function createCollectionFromLocalJSON(model, jsonFile) {
-	
-	//read json filedata 
-	var fileName = (Ti.Locale.getString("localdata_path") + jsonFile + ".json").toString();
-	var dataFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, fileName);
-	
-	//create and return a collection of specified model types populated with parsed JSON data
-	return Alloy.createCollection(model, JSON.parse(dataFile.read().text));
 }
 
 function setDropdownListener(picker, valueForChange, hiddenView) {
@@ -57,7 +42,7 @@ function setDropdownListener(picker, valueForChange, hiddenView) {
 	//set textfield visibility based on current picker selection
 	picker.addEventListener("change", function() {
 		var pickerValue = picker.getSelectedRow(0).value;
-		Ti.API.info("pickerValue:"+pickerValue+" picker.getSelectedRow(0).value:"+picker.getSelectedRow(0).value);
+		
 		if(pickerValue == valueForChange) {
 			hiddenView.setVisible(true);
 			hiddenView.setHeight("60dp");
@@ -101,13 +86,17 @@ function submitRegistration() {
 	
 	var registerController = Alloy.createController('register');
 	registerController.doRegistration(params, function(result) {
-		if(result == Alloy.Globals.SUCCESS) {
+		
+		if(Alloy.Globals.progress) { Alloy.Globals.progress.hide(); }
+		
+		if(result.message == Alloy.Globals.SUCCESS) {
 			confirmDialog();
 		}		
 	});
 }
 
-exports.goToRegistration = function() {
+exports.goToRegistration = function() {	
+
 	$.registration.open();
 };
 
@@ -115,22 +104,19 @@ exports.goToRegistration = function() {
  *  WINDOW LISTENERS
  *////////////////////
 $.registration.addEventListener("open", function() {
-
-		Alloy.Globals.progress.setMessage(Ti.Locale.getString('loading_form'));	
-		Alloy.Globals.progress.show();
-		
-	//initialize this view in the event it has not been accessed/prepared before
-	if(!viewInitialized) {		
-		populateDropdown($.countryPicker, createCollectionFromLocalJSON("surveydata", "countries"));
-		populateDropdown($.agegroupPicker, createCollectionFromLocalJSON("surveydata", "agegroups"));
-		populateDropdown($.referralPicker, createCollectionFromLocalJSON("surveydata", "referraltypes"));
-		populateCheckboxes($.genres, createCollectionFromLocalJSON("surveydata", "genres"));
-		setDropdownListener($.countryPicker, "US", $.zip);
-	    setDropdownListener($.referralPicker, 9, $.other);
-		viewInitialized = true;
-	}
 	
-	Alloy.Globals.progress.hide();
+	Alloy.Globals.progress.setMessage(Ti.Locale.getString('loading_form'));	
+	if(Alloy.Globals.progress) { Alloy.Globals.progress.show(); }
+	
+	//initialize this view in the event it has not been accessed/prepared before
+	populateDropdown($.countryPicker, Alloy.Collections.countries);
+	populateDropdown($.agegroupPicker, Alloy.Collections.agegroups);
+	populateDropdown($.referralPicker, Alloy.Collections.referraltypes);
+	populateCheckboxes($.genres, Alloy.Collections.genres);
+	setDropdownListener($.countryPicker, "US", $.zip);
+    setDropdownListener($.referralPicker, 9, $.other);
+	
+	if(Alloy.Globals.progress) { Alloy.Globals.progress.hide(); }
 });
 $.registration.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks

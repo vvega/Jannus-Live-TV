@@ -5,6 +5,7 @@
 		"reset_password_path": "sendresetemail.php",
 		"register_path": "register.php",
 		"videolist_path": "videolist.php",
+		"userdata_path": "senduserdata.php",
 		"client" : "mobile_app",
 		"vid_append": "video.mp4",
 		"vid_hi_append" : "hdvideo.mp4",

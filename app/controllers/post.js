@@ -1,8 +1,5 @@
 exports.sendData = function(endpoint, data, callback) {
-	if(Alloy.Globals.progress) {
-		Alloy.Globals.progress.show();
-	}
-	 
+
 	var url = Alloy.CFG.app_url + endpoint;
 	//Ti.API.info("url: "+ url);
 	 
@@ -69,12 +66,11 @@ exports.sendData = function(endpoint, data, callback) {
 	        			break;
 	        	}      		           	
 	        } 
-	        	
-	       callback(callback_value);	        
-	        
-	       if(Alloy.Globals.progress) {
-				try{ Alloy.Globals.progress.hide(); } catch(error) {};
-			}
+	       
+	       //if callback defined	
+	       if(callback) {	    	   
+	    	   callback({ message: callback_value, data: data });		    	         
+	    	}        
 			        
 	        return;
 	     },
@@ -84,9 +80,7 @@ exports.sendData = function(endpoint, data, callback) {
 
 			 alert("Error:\n\nUnable to connect to server.");
 	         callback(false);
-	         if(Alloy.Globals.progress) {
-	         	Alloy.Globals.progress.hide();
-	         }
+	         if(Alloy.Globals.progress) { Alloy.Globals.progress.hide(); }
 	     },
 	     timeout : 5000  // in milliseconds
 	 });

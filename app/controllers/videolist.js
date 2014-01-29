@@ -37,14 +37,18 @@ exports.populateList = function() {
 	});
 	
 };
-
+$.logout.addEventListener('touchstart', function(){
+	this.setBackgroundGradient(null);
+    this.setBackgroundColor('#cccccc');
+ });
+$.logout.addEventListener('touchend', function(){
+	this.setBackgroundGradient(Alloy.Globals.styles.jannus_gradient);
+ });
 /*////////////////////
  *  WINDOW LISTENERS
  *////////////////////
 $.videolist.addEventListener("open", function() {
-	if(Alloy.Globals.progress) {
-		try{ Alloy.Globals.progress.hide(); } catch(error) {};
-	}
+	if(Alloy.Globals.progress) { Alloy.Globals.progress.hide(); }
 });
 $.videolist.addEventListener("close", function() {
 	//clean data binding to prevent memory leaks

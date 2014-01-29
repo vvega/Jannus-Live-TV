@@ -1,3 +1,5 @@
 "ListItem": {
-	height: Alloy.Globals.styles.listitem_height
+	height: Alloy.Globals.styles.listitem_height,
+	backgroundSelectedColor: "#55f19f2e",
+	bubbleParent: true
 }

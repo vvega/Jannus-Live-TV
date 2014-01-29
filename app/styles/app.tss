@@ -33,6 +33,7 @@
 	color: Alloy.Globals.styles.textfield_text_color
 },
 "Button": {
+	focusable: true,
 	width: Alloy.Globals.styles.entry_fields_width,
 	height: Alloy.Globals.styles.button_height,
 	top: "10dp",

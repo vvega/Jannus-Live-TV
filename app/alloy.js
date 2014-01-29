@@ -11,9 +11,25 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 
 /*//////////////////////
+ *  Global Functions
+ *//////////////////////
+ function createCollectionFromLocalJSON(model, jsonFile) {
+	
+	//read json filedata 
+	var fileName = (Ti.Locale.getString("localdata_path") + jsonFile + ".json").toString();
+	var dataFile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, fileName);
+	
+	//create and return a collection of specified model types populated with parsed JSON data
+	return Alloy.createCollection(model, JSON.parse(dataFile.read().text));
+}
+/*//////////////////////
  *  Global Collections
  *//////////////////////
 Alloy.Collections.videos = Alloy.createCollection('video');
+Alloy.Collections.countries = createCollectionFromLocalJSON("surveydata", "countries");
+Alloy.Collections.agegroups = createCollectionFromLocalJSON("surveydata", "agegroups");
+Alloy.Collections.referraltypes = createCollectionFromLocalJSON("surveydata", "referraltypes");
+Alloy.Collections.genres = createCollectionFromLocalJSON("surveydata", "genres");
 
 /*//////////////////
  *  Global Values
@@ -41,6 +57,7 @@ Alloy.Globals.styles = {
 	textfield_height: "60dp",
 	button_height: "60dp",
 	header_height: "55dp",
+	header_icon_height: "40dp",
 	standard_margin: parseInt(Ti.App.SCREEN_WIDTH/30),
 	hq_button_margin: parseInt(Ti.App.SCREEN_WIDTH - 70),
 	entry_fields_width: Ti.App.SCREEN_WIDTH - 30,
@@ -59,6 +76,7 @@ Alloy.Globals.styles = {
 	button_font: {fontSize: "30dp", fontWeight: "bold"},
 	title_font: {fontSize: "25dp", fontWeight: "bold"},
 	subtitle_font: {fontSize: "20dp", fontweight: "bold"},
+	button_selected_color: "#b53513",
 	jannus_gradient: {
 		type:'linear',
 		colors:['#ffbf0f','#b53513'],

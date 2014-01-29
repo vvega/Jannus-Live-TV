@@ -68,18 +68,21 @@
 },
 "#quality": {
 	left: "5dp",
+	width: "40dp",
 	style: Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON,
 	color: "#ffbf0f",
 	font: {fontSize: "10sp", fontWeight: "bold"},
 	height: "30dp"
 },
-"#settings": {
+"#favorite": {
 	backgroundColor: "#00000000",
-	borderWidth: 1,
+	backgroundGradient: null,
+	backgroundImage: "/images/fav_icon.png",
+	borderWidth: 0,
 	borderRadius: 0,
 	borderColor: "#000",
-	width: "120dp",
-	right: "0",
-	height: Ti.UI.FILL,
+	width: Alloy.Globals.styles.header_icon_height,
+	right: "15dp",
+	height: Alloy.Globals.styles.header_icon_height,
 	font: {fontSize: "16sp", fontWeight: "bold"}
 }

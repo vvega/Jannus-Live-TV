@@ -2,10 +2,10 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>tv.jannuslive.jltv</id>
     <name>Jannus Live TV</name>
-    <version>1.1</version>
+    <version>1.11</version>
     <publisher>Veronica Vega</publisher>
     <url>http://www.jannuslive.tv</url>
-    <description>Jannus Live TV (v. 1.1): Broadcast of remote content recorded at Jannus Landing.</description>
+    <description>Jannus Live TV (v. 1.11): Broadcast of remote content recorded at Jannus Landing.</description>
     <copyright>2013 by Veronica Vega</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
@@ -26,7 +26,7 @@
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest android:versionCode="2" android:versionName="1.1.0"/>
+        <manifest android:versionCode="3" android:versionName="1.11"/>
     </android>
     <mobileweb>
         <precache/>
